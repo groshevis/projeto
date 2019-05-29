@@ -8,11 +8,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {LoginComponent} from './componentes/login/login.component';
+import {CadastroComponent} from './componentes/cadastro/cadastro.component';
+import {AaComponent} from './componentes/aa/aa.component';
+import {ProgressoComponent} from ',/componentes/progresso/rogresso.component';
+import {FormsModule} fom '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, CadastroComponent, AaComponent, ProgressoComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
   providers: [
     StatusBar,
     SplashScreen,
