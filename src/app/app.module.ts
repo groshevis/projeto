@@ -11,8 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {LoginComponent} from './componentes/login/login.component';
 import {CadastroComponent} from './componentes/cadastro/cadastro.component';
 import {AaComponent} from './componentes/aa/aa.component';
-import {ProgressoComponent} from ',/componentes/progresso/rogresso.component';
-import {FormsModule} fom '@angular/forms';
+import {ProgressoComponent} from './componentes/progresso/progresso.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, CadastroComponent, AaComponent, ProgressoComponent],

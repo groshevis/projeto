@@ -8,9 +8,9 @@ import {ProgressoComponent} from './componentes/progresso/progresso.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-  { path: 'login', component:LoginComponent}
-  { path: 'cadastro', component:CadastroComponent}
-  { path:'aa', component:AaComponent}
+  { path: 'login', component:LoginComponent},
+  { path: 'cadastro', component:CadastroComponent},
+  { path:'aa', component:AaComponent},
   { path:'progresso', component:ProgressoComponent}
 ];
 

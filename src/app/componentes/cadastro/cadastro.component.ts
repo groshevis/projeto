@@ -5,6 +5,8 @@ import {Component} from '@angular/core';
   templateUrl:'cadastro.component.html'
 })
 
-export class ProgressoComponent{
+export class CadastroComponent{
+
+    nome: String;
 
 }
