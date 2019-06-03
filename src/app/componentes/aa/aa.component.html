@@ -1,7 +1,23 @@
-<ion-title>
-  Auto Avaliação
-</ion-title>
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Autoavaliação </ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
+
+  <ion-label>   Quantas hora desse conteúdo você estudou essa semana? </ion-label>
+  <ion-input  [(ngModel)]="horas">  </ion-input>
+
+  <ion-label> Durante as aulas você realizou anotações? </ion-label>
+  <ion-input [(ngModel)]="anotacoes"> </ion-input>
+
+  <ion-label> Quanto do conteúdo você acredita que domina? </ion-label>
+  <ion-input [(ngModel)]="dominio"> </ion-input>
+
+  <ion-label>  Quantos exercícios em média ? </ion-label>
+  <ion-input [(ngModel)]="exercicios"> </ion-input>
+
+  <ion-button expand="full" color="dark" href="progresso">Ver progresso </ion-button>
 
 </ion-content>

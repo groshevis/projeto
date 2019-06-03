@@ -1,12 +1,14 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector:'cadastro-component',
+  selector:'cadastro.component',
   templateUrl:'cadastro.component.html'
 })
 
 export class CadastroComponent{
 
     nome: String;
-
+    materia:String;
+    frequencia:String;
+    autoavaliacao:String;
 }

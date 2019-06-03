@@ -1,13 +1,24 @@
 <ion-header>
- <ion-toolbar>
+  <ion-toolbar>
     <ion-title> EstudeBem</ion-title>
-   </ion-toolbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-label>  Nome: </ion-label>
+  <ion-input [(ngModel)]="nome"></ion-input>
 
-<ion-input  [(ngModel)]="nome"> Nome: </ion-input>
+  <ion-label> Matéria: </ion-label>
+  <ion-input [(ngModel)]="materia"></ion-input>
 
+  <ion-label> Em que frequência você estuda essa matéria? </ion-label>
+  <ion-input [(ngModel)]="frequencia">  </ion-input>
+
+  <ion-label> Em que frequência você deseja fazer sua autoavaliação? </ion-label>
+  <ion-input [(ngModel)]="autoavaliacao">  </ion-input>
+
+
+  <ion-button expand="full" color="dark" href="aa"> Cadastrar-se </ion-button>
 
 </ion-content>
