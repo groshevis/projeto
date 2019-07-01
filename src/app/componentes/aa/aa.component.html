@@ -6,18 +6,121 @@
 
 <ion-content>
 
-  <ion-label>   Quantas hora desse conteúdo você estudou essa semana? </ion-label>
-  <ion-input  [(ngModel)]="horas">  </ion-input>
+  <ion-card-title> Quantas hora desse conteúdo você estudou essa semana? </ion-card-title>
+  <h1> </h1>
+  <ion-radio-group>
+    <ion-item>
+      <ion-label>0 horas</ion-label>
+      <ion-radio slot="start" value="biff"></ion-radio>
+    </ion-item>
+    <h1> </h1>
 
-  <ion-label> Durante as aulas você realizou anotações? </ion-label>
-  <ion-input [(ngModel)]="anotacoes"> </ion-input>
+    <ion-item>
+      <ion-label>Em média 1 hora</ion-label>
+      <ion-radio slot="start" value="griff"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Em média 2 horas</ion-label>
+      <ion-radio slot="start" value="buford"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Três horas ou mais</ion-label>
+      <ion-radio slot="start" value="buford"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+  </ion-radio-group>
 
-  <ion-label> Quanto do conteúdo você acredita que domina? </ion-label>
-  <ion-input [(ngModel)]="dominio"> </ion-input>
+  <ion-card-title> Durante as aulas você realizou anotações? </ion-card-title>
+  <h1> </h1>
+  <ion-radio-group>
+    <ion-item>
+      <ion-label>Não</ion-label>
+      <ion-radio slot="start" value="biff"></ion-radio>
+    </ion-item>
+    <h1> </h1>
 
-  <ion-label>  Quantos exercícios em média ? </ion-label>
-  <ion-input [(ngModel)]="exercicios"> </ion-input>
+    <ion-item>
+      <ion-label>Pouco</ion-label>
+      <ion-radio slot="start" value="griff"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+
+    <ion-item>
+      <ion-label>Sim</ion-label>
+      <ion-radio slot="start" value="buford"></ion-radio>
+    </ion-item>
+
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Bastante</ion-label>
+      <ion-radio slot="start" value="buford"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+
+  </ion-radio-group>
+
+  <ion-card-title> Quanto do conteúdo você acredita que domina? </ion-card-title>
+  <h1> </h1>
+  <ion-radio-group>
+    <ion-item>
+      <ion-label>Nada</ion-label>
+      <ion-radio slot="start" value="biff"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Pouco</ion-label>
+      <ion-radio slot="start" value="griff"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Metade</ion-label>
+      <ion-radio slot="start" value="buford"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Totalmente</ion-label>
+      <ion-radio slot="start" value="buford"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+  </ion-radio-group>
+
+
+  <ion-card-title> Quantos exercícios em média ? </ion-card-title>
+  <h1> </h1>
+  <ion-radio-group>
+    <ion-item>
+      <ion-label>Nenhum</ion-label>
+      <ion-radio slot="start" value="biff"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Menos de 5</ion-label>
+      <ion-radio slot="start" value="griff"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Menos de 10</ion-label>
+      <ion-radio slot="start" value="buford"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+    <ion-item>
+      <ion-label>Mais de 10</ion-label>
+      <ion-radio slot="start" value="buford"></ion-radio>
+    </ion-item>
+    <h1> </h1>
+  </ion-radio-group>
 
   <ion-button expand="full" color="dark" href="progresso">Ver progresso </ion-button>
 
 </ion-content>
+
+
+
+
+
+
+<ion-footer>
+
+</ion-footer>
