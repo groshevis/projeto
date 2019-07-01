@@ -20,16 +20,16 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
   declarations: [AppComponent,  CadastroComponent, AaComponent, ProgressoComponent, CadastroListarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
-    AngularFireModule.initializeApp({
-      apiKey: "AIzaSyDuzd7sN354f0BK3424pvwNlcLCh8rH7cE",
-     authDomain: "projeto1-50dc5.firebaseapp.com",
-     databaseURL: "https://projeto1-50dc5.firebaseio.com",
-     projectId: "projeto1-50dc5",
-     storageBucket: "projeto1-50dc5.appspot.com",
-     messagingSenderId: "168631994042",
-     appId: "1:168631994042:web:ecbb0eb2147f09e6"
-    }),  AngularFireDatabaseModule
-  ],
+   AngularFireModule.initializeApp({
+     apiKey: "AIzaSyDuzd7sN354f0BK3424pvwNlcLCh8rH7cE",
+    authDomain: "projeto1-50dc5.firebaseapp.com",
+    databaseURL: "https://projeto1-50dc5.firebaseio.com",
+    projectId: "projeto1-50dc5",
+    storageBucket: "projeto1-50dc5.appspot.com",
+    messagingSenderId: "168631994042",
+    appId: "1:168631994042:web:ecbb0eb2147f09e6"
+   }),  AngularFireDatabaseModule
+ ],
   providers: [
     StatusBar,
     SplashScreen,

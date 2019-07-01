@@ -7,18 +7,18 @@
 <ion-content>
 
   <ion-label>  Nome: </ion-label>
-  <ion-input [(ngModel)]="nome"></ion-input>
+  <ion-input [(ngModel)]="usuario.nome"></ion-input>
 
   <ion-label> Matéria: </ion-label>
-  <ion-input [(ngModel)]="materia"></ion-input>
+  <ion-input [(ngModel)]="usuario.materia"></ion-input>
 
   <ion-label> Em que frequência você estuda essa matéria? </ion-label>
-  <ion-input [(ngModel)]="frequencia">  </ion-input>
+  <ion-input [(ngModel)]="usuario.frequencia">  </ion-input>
 
   <ion-label> Em que frequência você deseja fazer sua autoavaliação? </ion-label>
-  <ion-input [(ngModel)]="autoavaliacao">  </ion-input>
+  <ion-input [(ngModel)]="usuario.aa">  </ion-input>
 
 
-  <ion-button expand="full" color="dark" href="aa"> Cadastrar-se </ion-button>
+  <ion-button expand="full" color="dark" (click)="cadastrar()"> Cadastrar-se </ion-button>
 
 </ion-content>

@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import { Usuario } from './entidade/usuario';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector:'cadastro.component',
@@ -7,8 +9,17 @@ import {Component} from '@angular/core';
 
 export class CadastroComponent{
 
-    nome: String;
-    materia:String;
-    frequencia:String;
-    autoavaliacao:String;
+
+  cadastro: Usuario = new Usuario();
+
+constructor(private bd: AngularFireDatabase) { }
+
+ngOnInit() {}
+
+cadastrar(){
+this.bd.list('cadastro').push(this.cadastro);
+this.cadastro = new Usuario();
+alert('Seus dados foram salvos com sucesso!');
+}
+
 }
