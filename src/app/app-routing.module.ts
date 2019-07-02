@@ -12,7 +12,6 @@ const routes: Routes = [
   { path:'aa', component:AaComponent},
   { path:'progresso', component:ProgressoComponent},
   { path:'cadastro-listar', component:CadastroListarComponent},
-
 ];
 
 @NgModule({

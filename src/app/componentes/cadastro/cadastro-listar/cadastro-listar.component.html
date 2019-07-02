@@ -6,11 +6,11 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let contato of listaContatos| async">
-      <ion-label>{{usuario.nome}}</ion-label>
-      <ion-label>{{usuario.materia}}</ion-label>
-      <ion-label> {{usuario.frequencia}} </ion-label>
-      <ion-label> {{usuario.aa}} </ion-label>
+    <ion-item *ngFor="let cadastro of listaCadastros| async">
+      <ion-label>{{cadastro.nome}}</ion-label>
+      <ion-label>{{cadastro.materia}}</ion-label>
+      <ion-label> {{cadastro.frequencia}} </ion-label>
+      <ion-label> {{cadastro.aa}} </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
