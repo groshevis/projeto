@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-card-title> EstudeBem </ion-card-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-label>  Usuário: </ion-label>
+  <ion-input [(ngModel)]="login.usuario"></ion-input>
+
+  <ion-label> Senha: </ion-label>
+  <ion-input [(ngModel)]="login.senha" type="password"></ion-input>
+
+  <ion-button expand="full" color="dark" (click)="entrar()" href="aa"> Entrar </ion-button>
+  <ion-button expand="full" color="dark" href = "login-listar"> Ver todos os Logins </ion-button>
+
+</ion-content>

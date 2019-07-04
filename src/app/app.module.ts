@@ -15,9 +15,13 @@ import {ProgressoComponent} from './componentes/progresso/progresso.component';
 import {FormsModule} from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import{LoginComponent} from './componentes/login/login.component';
+import{LoginListarComponent} from './componentes/login/login-listar/login-listar.component';
+
+
 
 @NgModule({
-  declarations: [AppComponent,  CadastroComponent, AaComponent, ProgressoComponent, CadastroListarComponent],
+  declarations: [AppComponent,  CadastroComponent, AaComponent, ProgressoComponent, CadastroListarComponent, LoginComponent, LoginListarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
    AngularFireModule.initializeApp({
