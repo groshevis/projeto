@@ -11,8 +11,10 @@
 
   <ion-img src="https://blog.unifoa.edu.br/wp-content/uploads/2017/03/enem-2017-saiba-como-planejar-o-seu-ano-de-estudos.jpeg"> </ion-img>
 
-    <ion-button expand="full" color="dark" href="login"> Entrar </ion-button>
-  <ion-button expand="full" color="dark" href="cadastro"> Cadastrar-se </ion-button>
+
+  <ion-input type="text" name="nome" [(ngModel)]="usuario.email">Email:</ion-input>
+  <ion-input type="password" name="telefone" [(ngModel)]="usuario.senha">Senha:</ion-input>
+  <ion-button expand="full" color="dark" (click)="logar()">Acessar</ion-button>
 
 
 </ion-content>

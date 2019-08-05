@@ -7,6 +7,7 @@ import {ProgressoComponent} from './componentes/progresso/progresso.component';
 import {LoginComponent} from './componentes/login/login.component';
 import {LoginListarComponent} from './componentes/login/login-listar/login-listar.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
@@ -16,6 +17,8 @@ const routes: Routes = [
   { path:'cadastro-listar', component:CadastroListarComponent},
   {path:'login', component:LoginComponent},
   { path: 'login-listar', component:LoginListarComponent },
+
+
 
 ];
 
