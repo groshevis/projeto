@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 
 export class CadastroComponent {
 
-
   cadastro: Usuario = new Usuario();
 
   constructor(private bd: AngularFireDatabase,

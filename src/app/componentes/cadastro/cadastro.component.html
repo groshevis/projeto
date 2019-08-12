@@ -19,6 +19,16 @@
   <ion-input [(ngModel)]="cadastro.aa">  </ion-input>
 
 
+  <ion-input type="text" name="nome" [(ngModel)]="cidade.nome">Cidade:</ion-input>
+  <ion-item>
+    <ion-label position="floating">Sigla</ion-label>
+    <ion-select [(ngModel)]="cidade.estado">
+      <ion-select-option *ngFor='let estado of listaEstado | async' [value]="estado">
+        {{estado.nome}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
   <ion-button expand="full" color="dark" (click)="cadastrar()" href="aa"> Cadastrar-se </ion-button>
   <ion-button expand="full" color="dark" href = "cadastro-listar"> Ver todos os cadastros </ion-button>
 

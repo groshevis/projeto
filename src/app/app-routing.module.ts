@@ -17,6 +17,11 @@ const routes: Routes = [
   { path:'cadastro-listar', component:CadastroListarComponent},
   {path:'login', component:LoginComponent},
   { path: 'login-listar', component:LoginListarComponent },
+  { path: 'estado-listar', loadChildren: './componentes/estado/listar/listar.module#ListarPageModule' },
+  { path: 'estado-salvar', loadChildren: './componentes/estado/salvar/salvar.module#SalvarPageModule' },
+  { path: 'cidade-salvar', loadChildren: './componentes/cidade/salvar/salvar.module#SalvarPageModule' },
+  { path: 'cidade-listar', loadChildren: './componentes/cidade/listar/listar.module#ListarPageModule' }
+
 
 
 
