@@ -3,8 +3,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Router } from '@angular/router';
-import { Estado } from '../../estado/entidade/estado';
-import { Cidade } from '../entidade/cidade';
+import { Materia } from '../entidade/materia';
 
 @Component({
   selector: 'app-salvar',
@@ -13,20 +12,20 @@ import { Cidade } from '../entidade/cidade';
 })
 export class SalvarPage implements OnInit {
 
-  cidade: Cidade = new Cidade();
-  listaEstado: Observable<Estado[]>;
+  materia: Materia = new Materia();
+  listaMateria: Observable<Materia[]>;
 
   constructor(private fire: AngularFireDatabase, private rota: Router) {
-    this.listaEstado = this.fire.list<Estado>('estado').snapshotChanges().pipe(
+    this.listaMateria = this.fire.list<Materia>('materia').snapshotChanges().pipe(
 
       map(lista => lista.map(linha => ({ key: linha.payload.key, ...linha.payload.val() })))
 
     );
   }
   ngOnInit() { }
-  salvar(){
-     this.fire.list('cidade').push(this.cidade);
-     this.cidade = new Cidade();
-     this.rota.navigate(['listar']);
- }
+  salvar() {
+    this.fire.list('materia').push(this.materia);
+    this.materia = new Materia();
+    this.rota.navigate(['materia-listar']);
+  }
 }

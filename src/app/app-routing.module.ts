@@ -20,11 +20,10 @@ const routes: Routes = [
   { path: 'estado-listar', loadChildren: './componentes/estado/listar/listar.module#ListarPageModule' },
   { path: 'estado-salvar', loadChildren: './componentes/estado/salvar/salvar.module#SalvarPageModule' },
   { path: 'cidade-salvar', loadChildren: './componentes/cidade/salvar/salvar.module#SalvarPageModule' },
-  { path: 'cidade-listar', loadChildren: './componentes/cidade/listar/listar.module#ListarPageModule' }
-
-
-
-
+  { path: 'cidade-listar', loadChildren: './componentes/cidade/listar/listar.module#ListarPageModule' },
+  { path: 'materia-salvar', loadChildren: './componentes/materia/salvar/salvar.module#SalvarPageModule' },
+  { path: 'materia', loadChildren: './componentes/materia/materia.module#MateriaPageModule' },
+  { path: 'materia-salvar', loadChildren: './componentes/materia/salvar/salvar.module#SalvarPageModule' }
 ];
 
 @NgModule({

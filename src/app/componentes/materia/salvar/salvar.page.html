@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Matérias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-label> Selecione uma matéria </ion-label>
+  <ion-item>
+    <ion-label position="floating">Selecione</ion-label>
+    <ion-select [(ngModel)]="materia.nome">
+      <ion-select-option *ngFor='let materia of listaMateria | async' [value]="string">
+        {{materia.nome}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="full" color="dark" (click)="salvar()" href="aa">Salvar</ion-button>
+
+</ion-content>

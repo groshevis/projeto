@@ -6,30 +6,29 @@
 
 <ion-content>
 
-  <ion-label>  Nome: </ion-label>
+  <ion-label> Nome: </ion-label>
   <ion-input [(ngModel)]="cadastro.nome"></ion-input>
 
-  <ion-label> Matéria: </ion-label>
-  <ion-input [(ngModel)]="cadastro.materia"></ion-input>
 
   <ion-label> Com que frequência você estuda essa matéria? </ion-label>
-  <ion-input [(ngModel)]="cadastro.frequencia">  </ion-input>
+  <ion-input [(ngModel)]="cadastro.frequencia"> </ion-input>
 
   <ion-label> Com que frequência você deseja fazer sua autoavaliação? </ion-label>
-  <ion-input [(ngModel)]="cadastro.aa">  </ion-input>
+  <ion-input [(ngModel)]="cadastro.aa"> </ion-input>
 
+    <ion-label> Matéria: </ion-label>
 
-  <ion-input type="text" name="nome" [(ngModel)]="cidade.nome">Cidade:</ion-input>
   <ion-item>
-    <ion-label position="floating">Sigla</ion-label>
-    <ion-select [(ngModel)]="cidade.estado">
-      <ion-select-option *ngFor='let estado of listaEstado | async' [value]="estado">
-        {{estado.nome}}
+    <ion-label position="floating">Selecione</ion-label>
+    <ion-select [(ngModel)]="materia.nome">
+      <ion-select-option *ngFor='let materia of listaMateria | async' [value]="string">
+        {{materia.nome}}
       </ion-select-option>
     </ion-select>
   </ion-item>
 
+
   <ion-button expand="full" color="dark" (click)="cadastrar()" href="aa"> Cadastrar-se </ion-button>
-  <ion-button expand="full" color="dark" href = "cadastro-listar"> Ver todos os cadastros </ion-button>
+  <ion-button expand="full" color="dark" href="cadastro-listar"> Ver todos os cadastros </ion-button>
 
 </ion-content>

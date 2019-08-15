@@ -18,7 +18,7 @@ constructor(private afAuth: AngularFireAuth, private router: Router) {}
 logar(){
 this.afAuth.auth.signInWithEmailAndPassword(this.usuario.email, this.usuario.senha).then(
 () => { this.router.navigate(['aa']); }
-).catch( (erro) => console.log(erro) );
+).catch( (erro) => alert('Senha ou usuário incorretos!!') );
 }
 
 logout() {
