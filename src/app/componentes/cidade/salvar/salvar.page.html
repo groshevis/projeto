@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>salvar</ion-title>
+    <ion-title>Salvar</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,15 +10,15 @@
     <ion-label position="floating">Nome</ion-label>
     <ion-input name="nome" [(ngModel)]="cidade.nome"></ion-input>
   </ion-item>
-  
+
   <ion-item>
-    <ion-label position="floating">Sigla</ion-label>
+    <ion-label position="floating">Estado</ion-label>
     <ion-select [(ngModel)]="cidade.estado">
       <ion-select-option *ngFor='let estado of listaEstado | async' [value]="estado">
         {{estado.nome}}
       </ion-select-option>
     </ion-select>
   </ion-item>
-  <ion-button expand="full" shape="round" (click)="salvar()">salvar</ion-button>
+  <ion-button expand="full" color="dark" (click)="salvar()">Salvar</ion-button>
 
 </ion-content>

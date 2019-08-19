@@ -5,114 +5,55 @@
 </ion-header>
 
 <ion-content>
+  <ion-card-title>Quantas hora desse conteúdo você estudou essa semana? </ion-card-title>
+  <ion-item>
+    <ion-label position="floating">Selecione</ion-label>
+    <ion-select [(ngModel)]="AutoAvaliacao.horasestudadas">
+      <ion-select-option [value]="nada">0 horas</ion-select-option>
+      <ion-select-option [value]="uma">Em média 1 hora</ion-select-option>
+      <ion-select-option [value]="dois">Em média 2 horas</ion-select-option>
+      <ion-select-option [value]="tres">Três horas ou mais</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-  <ion-card-title> Quantas hora desse conteúdo você estudou essa semana? </ion-card-title>
-  <h1> </h1>
-  <ion-radio-group>
-    <ion-item>
-      <ion-label>0 horas</ion-label>
-      <ion-radio slot="start" value="biff"></ion-radio>
-    </ion-item>
-    <h1> </h1>
 
-    <ion-item>
-      <ion-label>Em média 1 hora</ion-label>
-      <ion-radio slot="start" value="griff"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Em média 2 horas</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Três horas ou mais</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-  </ion-radio-group>
+  <ion-card-title> Durante as aulas você realizou anotações?</ion-card-title>
+  <ion-item>
+    <ion-label position="floating">Selecione</ion-label>
+    <ion-select [(ngModel)]="AutoAvaliacao.anotacoes">
+      <ion-select-option [value]="nao">Não</ion-select-option>
+      <ion-select-option [value]="pouco">Pouco</ion-select-option>
+      <ion-select-option [value]="sim">Sim</ion-select-option>
+      <ion-select-option [value]="bastante">Bastante</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-  <ion-card-title> Durante as aulas você realizou anotações? </ion-card-title>
-  <h1> </h1>
-  <ion-radio-group>
-    <ion-item>
-      <ion-label>Não</ion-label>
-      <ion-radio slot="start" value="biff"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-
-    <ion-item>
-      <ion-label>Pouco</ion-label>
-      <ion-radio slot="start" value="griff"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-
-    <ion-item>
-      <ion-label>Sim</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Bastante</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-
-  </ion-radio-group>
-
-  <ion-card-title> Quanto do conteúdo você acredita que domina? </ion-card-title>
-  <h1> </h1>
-  <ion-radio-group>
-    <ion-item>
-      <ion-label>Nada</ion-label>
-      <ion-radio slot="start" value="biff"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Pouco</ion-label>
-      <ion-radio slot="start" value="griff"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Metade</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Totalmente</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-  </ion-radio-group>
+  <ion-card-title> Quanto do conteúdo você acredita que domina?</ion-card-title>
+  <ion-item>
+    <ion-label position="floating">Selecione</ion-label>
+    <ion-select [(ngModel)]="AutoAvaliacao.dominio">
+      <ion-select-option [value]="Nada">Nada</ion-select-option>
+      <ion-select-option [value]="pouco">Pouco</ion-select-option>
+      <ion-select-option [value]="metade">Metade</ion-select-option>
+      <ion-select-option [value]="maisdametade">Um pouco mais da metade</ion-select-option>
+      <ion-select-option [value]="totalmente">Totalmente</ion-select-option>
+    </ion-select>
+  </ion-item>
 
 
   <ion-card-title> Quantos exercícios em média ? </ion-card-title>
-  <h1> </h1>
-  <ion-radio-group>
-    <ion-item>
-      <ion-label>Nenhum</ion-label>
-      <ion-radio slot="start" value="biff"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Menos de 5</ion-label>
-      <ion-radio slot="start" value="griff"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Menos de 10</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-    <ion-item>
-      <ion-label>Mais de 10</ion-label>
-      <ion-radio slot="start" value="buford"></ion-radio>
-    </ion-item>
-    <h1> </h1>
-  </ion-radio-group>
+  <ion-item>
+    <ion-label position="floating">Selecione</ion-label>
+    <ion-select [(ngModel)]="AutoAvaliacao.exercicios">
+      <ion-select-option [value]="nenhum">Nenhum</ion-select-option>
+      <ion-select-option [value]="menosdecinco">Menos de 5</ion-select-option>
+      <ion-select-option [value]="menosdedez">Menos de 10</ion-select-option>
+      <ion-select-option [value]="maisdedez">Mais de 10</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-  <ion-button expand="full" color="dark" href="progresso">Ver progresso </ion-button>
+
+  <ion-button expand="full" color="dark" (click)="entrar()" href="progresso" > Salvar </ion-button>
 
 </ion-content>
 

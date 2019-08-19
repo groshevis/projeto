@@ -23,7 +23,9 @@ const routes: Routes = [
   { path: 'cidade-listar', loadChildren: './componentes/cidade/listar/listar.module#ListarPageModule' },
   { path: 'materia-salvar', loadChildren: './componentes/materia/salvar/salvar.module#SalvarPageModule' },
   { path: 'materia', loadChildren: './componentes/materia/materia.module#MateriaPageModule' },
-  { path: 'materia-salvar', loadChildren: './componentes/materia/salvar/salvar.module#SalvarPageModule' }
+  { path: 'materia-salvar', loadChildren: './componentes/materia/salvar/salvar.module#SalvarPageModule' },  { path: 'aa-listar', loadChildren: './componentes/aa/listar/listar.module#ListarPageModule' },
+  { path: 'aa-salvar', loadChildren: './componentes/aa/salvar/salvar.module#SalvarPageModule' }
+
 ];
 
 @NgModule({
