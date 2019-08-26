@@ -14,10 +14,9 @@
 
   <ion-input type="text" name="nome" [(ngModel)]="usuario.email">Email:</ion-input>
   <ion-input type="password" name="telefone" [(ngModel)]="usuario.senha">Senha:</ion-input>
+  <ion-button color="dark" expand="full" (click)="redefinir()"> Esqueci minha senha </ion-button>
   <ion-button expand="full" color="dark" (click)="logar()">Acessar</ion-button>
-
-
   <ion-button href="cadastro" color="dark" expand="full"> Cadastrar-se </ion-button>
-  <ion-button href="cidade-salvar" color="dark" expand="full"> Cidade </ion-button>
+
 
 </ion-content>

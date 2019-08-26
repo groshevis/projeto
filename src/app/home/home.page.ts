@@ -11,18 +11,23 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-usuario: Usuario = new Usuario();
+  usuario: Usuario = new Usuario();
 
-constructor(private afAuth: AngularFireAuth, private router: Router) {}
+  constructor(private afAuth: AngularFireAuth, private router: Router) { }
 
-logar(){
-this.afAuth.auth.signInWithEmailAndPassword(this.usuario.email, this.usuario.senha).then(
-() => { this.router.navigate(['aa']); }
-).catch( (erro) => alert('Senha ou usuário incorretos!!') );
-}
+  logar() {
+    this.afAuth.auth.signInWithEmailAndPassword(this.usuario.email, this.usuario.senha).then(
+      () => { this.router.navigate(['aa']); }
+    ).catch((erro) => alert('Senha ou usuário incorretos!!'));
+  }
 
-logout() {
-this.afAuth.auth.signOut();
-this.router.navigate(['/']);
-}
+  logout() {
+    this.afAuth.auth.signOut();
+    this.router.navigate(['/']);
+  }
+  redefinir() {
+    this.afAuth.auth.sendPasswordResetEmail(this.usuario.email).then(
+      () => { this.router.navigate(['home']); });
+    alert("Verifique seu Email")
+  }
 }

@@ -22,4 +22,8 @@ export class CadastroListarComponent implements OnInit {
   }
 
   ngOnInit() { }
+  excluir(key){
+    this.banco.list('cadastro').remove(key);
+    alert("Você excluiu seu cadastro");
+  }
 }

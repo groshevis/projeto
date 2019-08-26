@@ -21,4 +21,5 @@ export class AaComponent {
     this.aa = new AutoAvaliacao();
     alert('Seus dados foram salvos com sucesso!');
   }
+
 }

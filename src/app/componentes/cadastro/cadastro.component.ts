@@ -37,5 +37,4 @@ export class CadastroComponent {
     alert('Seus dados foram salvos com sucesso!');
   }
 
-
 }
