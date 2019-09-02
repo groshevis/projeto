@@ -8,7 +8,7 @@
   <ion-card-title>Quantas hora desse conteúdo você estudou essa semana? </ion-card-title>
   <ion-item>
     <ion-label position="floating">Selecione</ion-label>
-    <ion-select [(ngModel)]="AutoAvaliacao.horasestudadas">
+    <ion-select [(ngModel)]="aa.horasestudadas">
       <ion-select-option [value]="nada">0 horas</ion-select-option>
       <ion-select-option [value]="uma">Em média 1 hora</ion-select-option>
       <ion-select-option [value]="dois">Em média 2 horas</ion-select-option>
@@ -20,7 +20,7 @@
   <ion-card-title> Durante as aulas você realizou anotações?</ion-card-title>
   <ion-item>
     <ion-label position="floating">Selecione</ion-label>
-    <ion-select [(ngModel)]="AutoAvaliacao.anotacoes">
+    <ion-select [(ngModel)]="aa.anotacoes">
       <ion-select-option [value]="nao">Não</ion-select-option>
       <ion-select-option [value]="pouco">Pouco</ion-select-option>
       <ion-select-option [value]="sim">Sim</ion-select-option>
@@ -31,11 +31,11 @@
   <ion-card-title> Quanto do conteúdo você acredita que domina?</ion-card-title>
   <ion-item>
     <ion-label position="floating">Selecione</ion-label>
-    <ion-select [(ngModel)]="AutoAvaliacao.dominio">
+    <ion-select [(ngModel)]="aa.dominio">
       <ion-select-option [value]="Nada">Nada</ion-select-option>
       <ion-select-option [value]="pouco">Pouco</ion-select-option>
       <ion-select-option [value]="metade">Metade</ion-select-option>
-      <ion-select-option [value]="maisdametade">Um pouco mais da metade</ion-select-option>
+      <ion-select-option [value]="maisdametade">Mais da metade</ion-select-option>
       <ion-select-option [value]="totalmente">Totalmente</ion-select-option>
     </ion-select>
   </ion-item>
@@ -44,7 +44,7 @@
   <ion-card-title> Quantos exercícios em média ? </ion-card-title>
   <ion-item>
     <ion-label position="floating">Selecione</ion-label>
-    <ion-select [(ngModel)]="AutoAvaliacao.exercicios">
+    <ion-select [(ngModel)]="aa.exercicios">
       <ion-select-option [value]="nenhum">Nenhum</ion-select-option>
       <ion-select-option [value]="menosdecinco">Menos de 5</ion-select-option>
       <ion-select-option [value]="menosdedez">Menos de 10</ion-select-option>

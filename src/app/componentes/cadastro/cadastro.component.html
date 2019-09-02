@@ -12,7 +12,7 @@
   <ion-label> Matéria: </ion-label>
   <ion-item>
     <ion-label position="floating">Selecione</ion-label>
-    <ion-select [(ngModel)]="materia.nome">
+    <ion-select [(ngModel)]="cadastro.materia">
       <ion-select-option *ngFor='let materia of listaMateria | async' [value]="string">
         {{materia.nome}}
       </ion-select-option>
@@ -26,9 +26,6 @@
   <ion-input [(ngModel)]="cadastro.aa"> </ion-input>
 
 
-  <ion-button expand="full" color="dark" (click)="cadastrar()" > Cadastrar-se </ion-button>
-    <ion-button expand="full" color="dark" (click)="excluir(cadastro.key)"> Excluir </ion-button>
-  <ion-button expand="full" color="dark" href="cadastro-listar"> Ver todos os cadastros </ion-button>
-
+  <ion-button expand="full" color="dark" (click)="cadastrar()"> Cadastrar-se </ion-button>
 
 </ion-content>
