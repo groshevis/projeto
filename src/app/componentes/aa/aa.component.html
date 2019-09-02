@@ -5,7 +5,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-card-title>Quantas hora desse conteúdo você estudou essa semana? </ion-card-title>
+    <br>
+  <ion-card-title>Quantas horas desse conteúdo você estudou essa semana? </ion-card-title>
   <ion-item>
     <ion-label position="floating">Selecione</ion-label>
     <ion-select [(ngModel)]="aa.horasestudadas">
@@ -15,7 +16,7 @@
       <ion-select-option [value]="tres">Três horas ou mais</ion-select-option>
     </ion-select>
   </ion-item>
-
+  <br>
 
   <ion-card-title> Durante as aulas você realizou anotações?</ion-card-title>
   <ion-item>
@@ -27,7 +28,7 @@
       <ion-select-option [value]="bastante">Bastante</ion-select-option>
     </ion-select>
   </ion-item>
-
+    <br>
   <ion-card-title> Quanto do conteúdo você acredita que domina?</ion-card-title>
   <ion-item>
     <ion-label position="floating">Selecione</ion-label>
@@ -39,7 +40,7 @@
       <ion-select-option [value]="totalmente">Totalmente</ion-select-option>
     </ion-select>
   </ion-item>
-
+    <br>
 
   <ion-card-title> Quantos exercícios em média ? </ion-card-title>
   <ion-item>
@@ -51,7 +52,7 @@
       <ion-select-option [value]="maisdedez">Mais de 10</ion-select-option>
     </ion-select>
   </ion-item>
-
+    <br>
 
   <ion-button expand="full" color="dark" (click)="entrar()" href="progresso" > Salvar </ion-button>
 
