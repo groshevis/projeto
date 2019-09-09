@@ -17,11 +17,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import{LoginComponent} from './componentes/login/login.component';
 import{LoginListarComponent} from './componentes/login/login-listar/login-listar.component';
-
+import { CadastroSalvarComponent } from './componentes/cadastro/cadastro-salvar/cadastro-salvar.component';
 
 
 @NgModule({
-  declarations: [AppComponent,  CadastroComponent, AaComponent, ProgressoComponent, CadastroListarComponent, LoginComponent, LoginListarComponent],
+  declarations: [AppComponent,  CadastroComponent, AaComponent, ProgressoComponent, CadastroListarComponent, CadastroSalvarComponent, LoginComponent, LoginListarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule,
    AngularFireModule.initializeApp({
