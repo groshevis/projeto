@@ -13,10 +13,11 @@
   <ion-label position="floating">Selecione</ion-label>
   <ion-select [(ngModel)]="cadastro.materia">
     <ion-select-option *ngFor='let materia of listaMateria | async' [value]="string">
-      {{materia.nome}}
+      {{cadastro.materia}}
     </ion-select-option>
   </ion-select>
 </ion-item>
+
 
 <ion-label> Com que frequência você estuda essa matéria? </ion-label>
 <ion-input [(ngModel)]="cadastro.frequencia"> </ion-input>

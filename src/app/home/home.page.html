@@ -8,15 +8,32 @@
 </ion-header>
 
 <ion-content>
+  <form #meuForm='ngForm'>
+    <ion-img src="https://dkrn4sk0rn31v.cloudfront.net/2018/10/25180534/capa-rotina-estudos1.png"> </ion-img>
 
-  <ion-img src="https://blog.unifoa.edu.br/wp-content/uploads/2017/03/enem-2017-saiba-como-planejar-o-seu-ano-de-estudos.jpeg"> </ion-img>
+    <ion-item>
 
+      <ion-label position="floating" color="dark"> Email: </ion-label>
+      <ion-input #nome='ngModel' type="text" [(ngModel)]="usuario.email" name='nome' placeholder="insira seu email" required></ion-input>
+    </ion-item>
 
-  <ion-input type="text" name="nome" [(ngModel)]="usuario.email">Email:</ion-input>
-  <ion-input type="password" name="telefone" [(ngModel)]="usuario.senha">Senha:</ion-input>
-  <ion-button color="dark" expand="full" (click)="redefinir()"> Esqueci minha senha </ion-button>
-  <ion-button expand="full" color="dark" (click)="logar()">Acessar</ion-button>
-  <ion-button href="cadastro-salvar" color="dark" expand="full"> Cadastrar-se </ion-button>
+    <span style='color:red' *ngIf="nome.errors">
+      <ion-label> O email é obrigatório </ion-label>
+    </span>
 
+    <ion-item>
+      <ion-label position="floating" color="dark"> Senha: </ion-label>
+      <ion-input #senha='ngModel' type="password" name="telefone" [(ngModel)]="usuario.senha" placeholder="insira sua senha"  required></ion-input>
+    </ion-item>
+
+    <span style='color:red' *ngIf="senha.errors">
+      <ion-label> A senha é obrigatório </ion-label>
+    </span>
+
+    <ion-button color="dark" expand="full" (click)="redefinir()"> Esqueci minha senha </ion-button>
+    <ion-button [disabled]='!meuForm.form.valid' expand="full" color="dark" (click)="logar()">Acessar</ion-button>
+    <ion-button href="cadastro-salvar" color="dark" expand="full"> Cadastrar-se </ion-button>
+
+  </form>
 
 </ion-content>
