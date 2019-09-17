@@ -13,9 +13,6 @@ import { map } from 'rxjs/operators';
 export class CadastroComponent {
 
 
-  materia: Materia = new Materia();
-  listaMateria: Observable<Materia[]>;
-
   constructor(private fire: AngularFireDatabase, private rota: Router) {
     this.listaMateria = this.fire.list<Materia>('materia').snapshotChanges().pipe(
 
@@ -23,11 +20,7 @@ export class CadastroComponent {
     );
   }
 
-  salvar() {
-    this.fire.list('materia').push(this.materia);
-    this.materia = new Materia();
-    this.rota.navigate(['materia-listar']);
-  }
+
   ngOnInit() { }
 
 

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Cadastro </ion-title>
+    <ion-title > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cadastro </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,17 +8,18 @@
 <ion-label> Nome: </ion-label>
 <ion-input [(ngModel)]="cadastro.nome"></ion-input>
 
+
 <ion-label> Matéria: </ion-label>
 <ion-item>
   <ion-label position="floating">Selecione</ion-label>
   <ion-select [(ngModel)]="cadastro.materia">
     <ion-select-option *ngFor='let materia of listaMateria | async' [value]="string">
-      {{cadastro.materia}}
+      {{materia.nome}}
     </ion-select-option>
   </ion-select>
 </ion-item>
 
-
+<br>
 <ion-label> Com que frequência você estuda essa matéria? </ion-label>
 <ion-input [(ngModel)]="cadastro.frequencia"> </ion-input>
 

@@ -1,32 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      EstudeBem
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EstudeBem
     </ion-title>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
   <form #meuForm='ngForm'>
     <ion-img src="https://dkrn4sk0rn31v.cloudfront.net/2018/10/25180534/capa-rotina-estudos1.png"> </ion-img>
 
     <ion-item>
-
       <ion-label position="floating" color="dark"> Email: </ion-label>
       <ion-input #nome='ngModel' type="text" [(ngModel)]="usuario.email" name='nome' placeholder="insira seu email" required></ion-input>
     </ion-item>
 
-    <span style='color:red' *ngIf="nome.errors">
+    <span style='color:red' *ngIf="nome.errors && nome.touched">
       <ion-label> O email é obrigatório </ion-label>
     </span>
 
     <ion-item>
       <ion-label position="floating" color="dark"> Senha: </ion-label>
-      <ion-input #senha='ngModel' type="password" name="telefone" [(ngModel)]="usuario.senha" placeholder="insira sua senha"  required></ion-input>
+      <ion-input #senha='ngModel' type="password" name="telefone" [(ngModel)]="usuario.senha" placeholder="insira sua senha" required></ion-input>
     </ion-item>
 
-    <span style='color:red' *ngIf="senha.errors">
+    <span style='color:red' *ngIf="senha.errors && senha.touched">
       <ion-label> A senha é obrigatório </ion-label>
     </span>
 
