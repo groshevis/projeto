@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lista de Cadastros</ion-title>
+    <ion-title>Lista de Cadastros</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +14,7 @@
     <ion-item *ngFor="let cadastro of listaFiltro">
       <ion-label>{{cadastro.nome}}</ion-label>
         <ion-button expand="full" color="dark" (click)="excluir(cadastro.key)"> <ion-icon name="close-circle"></ion-icon> </ion-button>
-        <ion-button expand="full" color="dark" (click)="alterar(cadastro.key)"> <ion-icon name="create"></ion-icon> </ion-button>
+        <ion-button expand="full" color="dark" (click)="alterar(cadastro)"> <ion-icon name="create"></ion-icon> </ion-button>
     </ion-item>
   </ion-list>
 

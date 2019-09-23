@@ -3,4 +3,5 @@ export class Usuario{
   materia:string;
   frequencia:string;
   aa:string;
+  key: any;
 }

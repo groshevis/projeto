@@ -5,6 +5,7 @@ import { Usuario } from '../entidade/usuario';
 import { Materia } from '../.././materia/entidade/materia';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cadastro-salvar',
@@ -18,7 +19,7 @@ export class CadastroSalvarComponent implements OnInit {
   listaMateria: Observable<Materia[]>;
   cadastro: Usuario = new Usuario();
 
-  constructor(private fire: AngularFireDatabase, private rota: Router) {
+  constructor(private fire: AngularFireDatabase, private rota: Router, private modalController: ModalController) {
     this.listaMateria = this.fire.list<Materia>('materia').snapshotChanges().pipe(
 
       map(lista => lista.map(linha => ({ key: linha.payload.key, ...linha.payload.val() })))
@@ -35,8 +36,15 @@ export class CadastroSalvarComponent implements OnInit {
   }
 
   cadastrar() {
-    this.fire.list('cadastro').push(this.cadastro);
-    this.cadastro = new Usuario();
-    alert('Seus dados foram salvos com sucesso!');
+    if(this.cadastro.key == null){
+      this.fire.list('cadastro').push(this.cadastro);
+      this.cadastro = new Usuario();
+      alert('Seus dados foram salvos com sucesso!');
+    }
+    else{
+      this.fire.object('cadastro/'+this.cadastro.key).update(this.cadastro);
+      this.modalController.dismiss();
+    }
+
   }
 }
