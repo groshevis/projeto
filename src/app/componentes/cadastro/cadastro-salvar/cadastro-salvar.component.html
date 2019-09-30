@@ -6,7 +6,7 @@
 
 <ion-content>
 <ion-label> Nome: </ion-label>
-<ion-input [(ngModel)]="cadastro.nome"></ion-input>
+<ion-input [(ngModel)]="cadastro.nome" ></ion-input>
 
 
 <ion-label> Matéria: </ion-label>
@@ -21,11 +21,30 @@
 
 <br>
 <ion-label> Com que frequência você estuda essa matéria? </ion-label>
-<ion-input [(ngModel)]="cadastro.frequencia"> </ion-input>
+<ion-item>
+  <ion-label position="floating">Selecione</ion-label>
+  <ion-select [(ngModel)]="cadastro.frequencia">
+    <ion-select-option >1 vez na semana</ion-select-option>
+    <ion-select-option >2 vezes na semana</ion-select-option>
+    <ion-select-option >3 vezes na semana</ion-select-option>
+    <ion-select-option >4 vezes na semana</ion-select-option>
+    <ion-select-option >5 vezes na semana</ion-select-option>
+  </ion-select>
+</ion-item>
 
+<br>
 <ion-label> Com que frequência você deseja fazer sua autoavaliação? </ion-label>
-<ion-input [(ngModel)]="cadastro.aa"> </ion-input>
-
+<ion-item>
+  <ion-label position="floating">Selecione</ion-label>
+  <ion-select [(ngModel)]="cadastro.aa">
+    <ion-select-option >1 vez no mês</ion-select-option>
+    <ion-select-option >2 vezes no mês</ion-select-option>
+    <ion-select-option >3 vezes no mês</ion-select-option>
+    <ion-select-option >4 vezes no mês</ion-select-option>
+    <ion-select-option >5 vezes no mês</ion-select-option>
+  </ion-select>
+</ion-item>
+<br>
 <ion-button expand="full" color="dark" (click)="cadastrar()" href="aa"> Cadastrar </ion-button>
 <ion-button expand="full" color="dark" href="cadastro-listar"> Ver todos cadastros </ion-button>
 

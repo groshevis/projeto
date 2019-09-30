@@ -14,25 +14,27 @@
 
     <ion-item>
       <ion-label position="floating" color="dark"> Email: </ion-label>
-      <ion-input #nome='ngModel' type="text" [(ngModel)]="usuario.email" name='nome' placeholder="insira seu email" required></ion-input>
+      <ion-input #nome='ngModel' type="text" [(ngModel)]="usuario.email" name='nome' placeholder="Insira seu email" required></ion-input>
     </ion-item>
 
     <span style='color:red' *ngIf="nome.errors && nome.touched">
-      <ion-label> O email é obrigatório </ion-label>
+      <ion-label> O email é obrigatório  <ion-icon name="information-circle"></ion-icon> </ion-label>
     </span>
 
     <ion-item>
       <ion-label position="floating" color="dark"> Senha: </ion-label>
-      <ion-input #senha='ngModel' type="password" name="telefone" [(ngModel)]="usuario.senha" placeholder="insira sua senha" required></ion-input>
+      <ion-input #senha='ngModel' type="password" name="telefone" [(ngModel)]="usuario.senha" placeholder="Insira sua senha" required></ion-input>
     </ion-item>
 
     <span style='color:red' *ngIf="senha.errors && senha.touched">
-      <ion-label> A senha é obrigatório </ion-label>
+      <ion-label> A senha é obrigatória <ion-icon name="key"></ion-icon> </ion-label>
     </span>
 
-    <ion-button color="dark" expand="full" (click)="redefinir()"> Esqueci minha senha </ion-button>
+    <ion-button color="dark" expand="full" (click)="redefinir()" color="dark"> Esqueci minha senha </ion-button>
     <ion-button [disabled]='!meuForm.form.valid' expand="full" color="dark" (click)="logar()">Acessar</ion-button>
-    <ion-button href="cadastro-salvar" color="dark" expand="full"> Cadastrar-se </ion-button>
+    <ion-button href="cadastro-salvar" color="dark" expand="full" color="dark" > Cadastrar-se </ion-button>
+
+
 
   </form>
 
