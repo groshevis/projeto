@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'materia-salvar', loadChildren: './componentes/materia/salvar/salvar.module#SalvarPageModule' },
   { path: 'materia', loadChildren: './componentes/materia/materia.module#MateriaPageModule' },
   { path: 'materia-salvar', loadChildren: './componentes/materia/salvar/salvar.module#SalvarPageModule' },  { path: 'aa-listar', loadChildren: './componentes/aa/listar/listar.module#ListarPageModule' },
-  { path: 'aa-salvar', loadChildren: './componentes/aa/salvar/salvar.module#SalvarPageModule' }
+  { path: 'aa-salvar', loadChildren: './componentes/aa/salvar/salvar.module#SalvarPageModule' },
+  { path: 'intermediario', loadChildren: './home/intermediario/intermediario.module#IntermediarioPageModule' }
 
 
 ];
