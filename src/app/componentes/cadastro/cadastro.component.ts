@@ -1,25 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'cadastro.component',
-  templateUrl: 'cadastro.component.html'
+  selector:'cadastro.component',
+  templateUrl:'cadastro.component.html'
 })
 
-export class CadastroComponent {
-
-
-  constructor() {
-  }
-
-
-  ngOnInit() { }
-
+export class CadastroComponent{
 
 
 }
-
-
-
-
-//<ion-button expand="full" color="dark" (click)="excluir(cadastro.key)"> Excluir </ion-button>
-//<ion-button expand="full" color="dark" href="cadastro-listar"> Ver todos os cadastros </ion-button>

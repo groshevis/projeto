@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListarPage } from './listar.page';
+import { NotificacaoSalvarComponent } from './notificacao-salvar.component';
 
-describe('ListarPage', () => {
-  let component: ListarPage;
-  let fixture: ComponentFixture<ListarPage>;
+describe('NotificacaoSalvarComponent', () => {
+  let component: NotificacaoSalvarComponent;
+  let fixture: ComponentFixture<NotificacaoSalvarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListarPage ],
+      declarations: [ NotificacaoSalvarComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListarPage);
+    fixture = TestBed.createComponent(NotificacaoSalvarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

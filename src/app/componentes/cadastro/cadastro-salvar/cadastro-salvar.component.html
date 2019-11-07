@@ -5,47 +5,43 @@
 </ion-header>
 
 <ion-content>
-<ion-label> Nome: </ion-label>
-<ion-input [(ngModel)]="cadastro.nome" ></ion-input>
+  <ion-item>
+      <ion-label position='floating'> Nome Completo: </ion-label>
+      <ion-input [(ngModel)]="cadastro.nome" ></ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-label position="floating"> CPF: </ion-label>
+      <ion-input  [(ngModel)]="cadastro.cpf" ></ion-input>
+    </ion-item>
 
-<ion-label> Matéria: </ion-label>
-<ion-item>
-  <ion-label position="floating">Selecione</ion-label>
-  <ion-select [(ngModel)]="cadastro.materia">
-    <ion-select-option *ngFor='let materia of listaMateria | async' [value]="string">
-      {{materia.nome}}
-    </ion-select-option>
-  </ion-select>
-</ion-item>
+    <ion-item>
+      <ion-label position="floating"> Registro Acadêmico: </ion-label>
+      <ion-input [(ngModel)]="cadastro.ra"></ion-input>
+    </ion-item>
 
-<br>
-<ion-label> Com que frequência você estuda essa matéria? </ion-label>
-<ion-item>
-  <ion-label position="floating">Selecione</ion-label>
-  <ion-select [(ngModel)]="cadastro.frequencia">
-    <ion-select-option >1 vez na semana</ion-select-option>
-    <ion-select-option >2 vezes na semana</ion-select-option>
-    <ion-select-option >3 vezes na semana</ion-select-option>
-    <ion-select-option >4 vezes na semana</ion-select-option>
-    <ion-select-option >5 vezes na semana</ion-select-option>
-  </ion-select>
-</ion-item>
+    <ion-item>
+      <ion-label position="floating"> Número de Contato: </ion-label>
+      <ion-input [(ngModel)]="cadastro.numero"></ion-input>
+    </ion-item>
 
-<br>
-<ion-label> Com que frequência você deseja fazer sua autoavaliação? </ion-label>
-<ion-item>
-  <ion-label position="floating">Selecione</ion-label>
-  <ion-select [(ngModel)]="cadastro.aa">
-    <ion-select-option >1 vez no mês</ion-select-option>
-    <ion-select-option >2 vezes no mês</ion-select-option>
-    <ion-select-option >3 vezes no mês</ion-select-option>
-    <ion-select-option >4 vezes no mês</ion-select-option>
-    <ion-select-option >5 vezes no mês</ion-select-option>
-  </ion-select>
-</ion-item>
-<br>
-<ion-button expand="full" color="dark" (click)="cadastrar()" href="intermediario"> Cadastrar </ion-button>
-<ion-button expand="full" color="dark" href="cadastro-listar"> Ver todos cadastros </ion-button>
+    <ion-item>
+      <ion-label position="floating"> Estado: </ion-label>
+      <ion-select>
+        <ion-select-option value="p">Paraná</ion-select-option>
+        <ion-select-option value="m">Minas Gerais</ion-select-option>
+        <ion-select-option value="r">Rio de Janeiro</ion-select-option>
+        <ion-select-option value="s">São Paulo</ion-select-option>
+      </ion-select>
+    </ion-item>
 
-</ion-content>
+    <ion-item>
+      <ion-label position="floating"> Cidade: </ion-label>
+      <ion-input t[(ngModel)]="cadastro.cidade"></ion-input>
+    </ion-item>
+
+    <ion-card>
+      <ion-button color= "dark" href="inicio"> <ion-icon name="checkmark"></ion-icon> Salvar </ion-button>
+      <ion-button color="dark" href="home" > Voltar </ion-button>
+    </ion-card>
+  </ion-content>

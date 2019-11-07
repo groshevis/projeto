@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de notificações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let login of listaNotificações | async"> //tem que criar a lista se n n da pra observar algo que nem exise
+      <ion-label>{{notificacao.motivo}}</ion-label>
+      <ion-label>{{notiicacao.data}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="dark"  href="home"> Voltar ao início </ion-button>
+</ion-content>

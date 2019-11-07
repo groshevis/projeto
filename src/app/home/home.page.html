@@ -1,41 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      &nbsp;&nbsp;&nbsp;EstudeBem
-    </ion-title>
-
-  </ion-toolbar>
+    <ion-toolbar>
+      <ion-title> SICAE <ion-icon name="school"></ion-icon> </ion-title>
+    </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
-
-  <form #meuForm='ngForm'>
-    <ion-img src="https://dkrn4sk0rn31v.cloudfront.net/2018/10/25180534/capa-rotina-estudos1.png"> </ion-img>
-
-    <ion-item>
-      <ion-label position="floating" color="dark"> Email: </ion-label>
-      <ion-input #nome='ngModel' type="text" [(ngModel)]="usuario.email" name='nome' placeholder="Insira seu email" required></ion-input>
-    </ion-item>
-
-    <span style='color:red' *ngIf="nome.errors && nome.touched">
-      <ion-label> O email é obrigatório  <ion-icon name="information-circle"></ion-icon> </ion-label>
-    </span>
+  <ion-card>
+    <ion-card-header>
+    <ion-card-title> Entrar </ion-card-title>
+  </ion-card-header>
+    <ion-card-content>
+     <ion-item>
+       <ion-label position="floating"> Registro Acadêmico: </ion-label>
+         <ion-input type="text"></ion-input>
+     </ion-item>
 
     <ion-item>
-      <ion-label position="floating" color="dark"> Senha: </ion-label>
-      <ion-input #senha='ngModel' type="password" name="telefone" [(ngModel)]="usuario.senha" placeholder="Insira sua senha" required></ion-input>
+      <ion-label position="floating"> CPF: </ion-label>
+        <ion-input type="text"></ion-input>
     </ion-item>
 
-    <span style='color:red' *ngIf="senha.errors && senha.touched">
-      <ion-label> A senha é obrigatória <ion-icon name="key"></ion-icon> </ion-label>
-    </span>
+<ion-button color="dark" href="notificacao"> Entrar <ion-icon name="log-in"> </ion-icon></ion-button>
+<ion-button color="dark" href="cadastro-salvar"> Cadastrar </ion-button>
+</ion-card-content>
+</ion-card>
 
-    <ion-button color="dark" expand="full" (click)="redefinir()" color="dark"> Esqueci minha senha </ion-button>
-    <ion-button [disabled]='!meuForm.form.valid' expand="full" color="dark" href="intermediario">Acessar</ion-button>
-    <ion-button href="cadastro-salvar" color="dark" expand="full" color="dark" > Cadastrar-se </ion-button>
+<ion-card color="light">
+<ion-card-content>
+<ion-button color="dark"> Código do Admin </ion-button>
 
-
-
-  </form>
-
+</ion-card-content>
+</ion-card>
 </ion-content>
+
+<ion-footer>
+
+</ion-footer>

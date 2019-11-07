@@ -1,7 +1,8 @@
 export class Usuario{
   nome:string;
-  materia:string;
-  frequencia:string;
-  aa:string;
+  cpf:string;
+  ra:string;
+  numero:string;
+  cidade:string;
   key: any;
 }
